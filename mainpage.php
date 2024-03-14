@@ -14,9 +14,9 @@ $display_table="SELECT * FROM employees";
 $display_result=mysqli_query($conn, $display_table);
 ?>
 <h1 style="text-align:center;">Employee Details</h1>
-<a href="addemployee.php" class="add_emp_btn"><button><i class="fa fa fa-user-plus" aria-hidden="true"></i>Add Employee</button></a>
 <a href="filtering.php" class="filter_btn"><button><i class="fa fa-solid fa-filter" style="color: #0c0d0d;"></i>Filter</button></a>
-<table rules='all' cellpadding='20px' cellsacing='20px' style='border:3px solid whitesmoke;  width: 95%;margin:auto;'>
+<a href="addemployee.php" class="add_emp_btn"><button><i class="fa fa fa-user-plus" aria-hidden="true"></i>Add Employee</button></a>
+<table rules='all' cellpadding='20px' cellspacing='20px' style='border:3px solid whitesmoke; width: 95%;margin:auto;'>
 
 <?php 
 echo "<tr style='background-color:skyblue;font-weight:bold;'>";

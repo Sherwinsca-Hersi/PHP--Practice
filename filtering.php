@@ -1,3 +1,9 @@
+<?php
+
+error_reporting(E_ERROR | E_PARSE);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,7 +53,7 @@
         $employee_job=$_POST['job'];
         $employee_salary=$_POST['salary'];
         $employee_dept=$_POST['department'];
-        $display_table="SELECT * FROM employees where (job='$employee_job' AND salary>='$employee_salary' AND dept='$employee_dept')";
+        $display_table="SELECT * FROM employees where (job='$employee_job' OR dept='$employee_dept')";
         $display_result=mysqli_query($conn, $display_table);
     ?>
         <a href="addemployee.php" class="add_emp_btn"><button><i class="fa fa fa-user-plus" aria-hidden="true"></i>Add Employee</button></a>

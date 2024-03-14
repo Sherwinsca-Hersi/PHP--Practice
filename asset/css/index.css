@@ -110,11 +110,11 @@ body{
     margin: 10px;
     cursor: pointer;
 }
-.add_emp_btn{
-    float: right;
+.add_emp_btn ,.filter_btn{
     margin:30px 50px;
+    float:right;
 }
-.add_emp_btn button, .filter_btn{
+.add_emp_btn button, .filter_btn button{
     padding: 20px;
     background-color: skyblue;
     color: black;

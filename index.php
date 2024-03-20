@@ -3,6 +3,10 @@
     <head>
         <link rel="stylesheet" type="text/css" href="asset\css\index.css">
     </head>
+    <!-- <?php
+        // require 'learning.php';
+        // include_once 'learning.php';
+    ?> -->
     <body>
         <div class="header">
             <img src="asset\images\logo.png">
@@ -71,7 +75,6 @@
                 </div>
             </form>
         </div>
-        <?php require_once 'learning.php';?>
-        
+       
     </body>
 </html>

@@ -25,7 +25,7 @@ $queryResult=mysqli_query($conn,$query);
         <h2>Salary:<?php echo $row['salary'];?></h2>
         <h2>Department:<?php echo $row['dept'];?></h2>
         <h2>Email:<?php echo $row['email'];?></h2>
-        <form method="post" action="showEmployee.php">
+        <form method="post" action="mainpage.php">
             <input type="submit" name="close" value="Close">
         </form>
         

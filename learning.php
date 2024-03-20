@@ -28,15 +28,14 @@
 // echo "Line 1 \r\nLine 2\n";
 // echo "Hello,\nworld\r!";
 
-// function local(){
-//     static $y=10;
-//     $y++;
-//     echo " \n $y \n"; 
-// }
+function local(){
+    static $y=10;
+    $y++;
+    echo " \n $y \n"; 
+}
 
-// local();
-// local();
-// local();
+Local();
+local();
 // $x=2;
 // $y=$x;
 // if ($x==2){
@@ -52,6 +51,7 @@
 
 $name="sherwinhersi";
 $domain="gmail.com";
+echo $name;
 // $name.="shero";
 // $email=$name."@".$domain;
 // echo $email."<br>";

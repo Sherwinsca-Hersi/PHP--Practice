@@ -1,19 +1,34 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update Employee</title>
-    <link rel="stylesheet" type="text/css" href="asset\css\index.css">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>All Calls & Actions </title>
+
+	<!-- Add jQuery library -->
+	<script type="text/javascript" src="lib/jquery-1.10.2.min.js"></script>
+
+	<!-- Add mousewheel plugin (this is optional) -->
+	<script type="text/javascript" src="lib/jquery.mousewheel.pack.js?v=3.1.3"></script>
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="source/jquery.fancybox.pack.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+	<!-- Add Button helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+
 </head>
 <body>
 <?php
-require_once 'connect.php';
-
 if(isset($_GET['show_id'])){
 
     $show_Id = $_GET['show_id'];
-    $query = "select * from employees where id='$show_Id'";
+$conn=new mysqli("localhost","root","","employee");
+$query = "select * from employees where id='$show_Id'";
     $queryResult=mysqli_query($conn,$query);
     while($row = mysqli_fetch_array($queryResult))
     {
@@ -59,24 +74,4 @@ if(isset($_GET['show_id'])){
 }
 ?>
 </body>
-<?php
-
-if(isset($_POST['update'])){
-
-$employee_name=$_POST['empname'];
-$employee_job=$_POST['job'];
-$employee_salary=$_POST['salary'];
-$employee_dept=$_POST['department'];
-$employee_email=$_POST['email'];
-
-$update_query="UPDATE `employees` SET `empname`='$employee_name',`job`='$employee_job', `salary`='$employee_salary', `dept`='$employee_dept',`email`='$employee_email' where id='$show_Id'";
-
-$update_result=mysqli_query($conn,$update_query);
-
-header("location: mainpage.php");
-
-}
-                
-?>
 </html>
-    

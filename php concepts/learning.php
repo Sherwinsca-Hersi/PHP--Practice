@@ -112,6 +112,31 @@ echo"</pre>";
         </table>
         <?php
         }
+        //call back Function-passing function as parameter to another function...
+        $username="Admin";
+            function user($greet,$username){
+                $greet($username);
+            }
+            function greet($username){
+                echo  "<h1>Greet User</h1><br>";
+                echo "<h2> Welcome"."  ". $username ."</h2>";
+            }
+            user("greet",$username);
+
+            //JSON Encode
+                //1.indexed Array
+                $a=array("red","yellow","green");
+                print_r(json_encode($a)); //returns the json array
+                //1.associative Array
+                $b=array("orange"=>"orange","apple"=>"red","banana"=>"yellow");
+                echo json_encode($b);   //returns json object
+
+            //JSON Decode
+                //1.JSON Obj
+                $c='{"orange":"orange","apple":"red","banana":"yellow"}';
+                print_r(json_decode($c,true));  //returns the associative array
+
+                
         ?>
         <br><br>
     </body>

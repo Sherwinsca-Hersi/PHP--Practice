@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Page</title>
-    <link rel="stylesheet" href="asset/css/index.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -35,16 +35,14 @@ while($row=mysqli_fetch_array($display_result)){
     
     <tr onclick="passData(<?=$row['id']?>)">
         <td><?=$i?> </td>
-        <td><?=$row['empname']?></td>
+        <td><a href="showEmployee.php?show_id=<?=$row['id']?>" class="empname_linkstyle"><?=$row['empname']?></a></td>
         <td><?=$row['job']?></td>
         <td><?=$row['salary']?></td>
         <td><?=$row['dept']?></td>
         <td><?=$row['email']?></td>
-        <td><a href="updateEmployee.php?show_id=<?=$row['id']?>"><i class="fa fas fa-edit"></i></td>
+        <td><a href="updateEmployee.php?show_id=<?=$row['id']?>" onclick="openWin()"><i class="fa fas fa-edit"></i></a></td>
         <td><a href="deleteEmployee.php?delete_id=<?=$row['id']?>" onclick="return confirm('Do you really want to delete?');"><i class='fa fa-trash' aria-hidden='true' style='color:red;'></i></a></td>
-      
       </tr>
-      </a>
     <?php
     $i++;
 }
@@ -61,6 +59,10 @@ const passData =(id) => {
   a.href = `mainpage.php?show_id=${id}`;
   a.click();
 
+}
+function openWin()
+{
+ var myWindow = window.open("updateEmployee.php","","width=1200,height=600");
 }
 
 </script>

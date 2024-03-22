@@ -134,7 +134,7 @@ echo"</pre>";
             //JSON Decode
                 //1.JSON Obj
                 $c='{"orange":"orange","apple":"red","banana":"yellow"}';
-                print_r(json_decode($c,true));  //returns the associative array
+                var_dump(json_decode($c));  //returns the associative array
 
                 
         ?>

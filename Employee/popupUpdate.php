@@ -8,24 +8,24 @@
 <body>
     <style>
         .popup{
-    width: 400px;
-    background-color: white;
-    border-radius: 20px;
-    padding: 0px 30px 20px;
-    text-align: center;
-    position: absolute;
-    top:0%;
-    left:50%;
-    transform: translate(-50%,-50%) scale(0.1);
-    visibility: hidden;
-    transition: transform 0.4s,top 0.4s;
-}
+            width: 400px;
+            background-color: white;
+            border-radius: 20px;
+            padding: 0px 30px 20px;
+            text-align: center;
+            position: absolute;
+            top:0%;
+            left:50%;
+            transform: translate(-50%,-50%) scale(0.1);
+            visibility: hidden;
+            transition: transform 0.4s,top 0.4s;
+        }
 
-.open_popup{
-    visibility: visible;
-    top: 50%;
-    transform: translate(-50%,-50%) scale(1);
-}
+        .open_popup{
+            visibility: visible;
+            top: 50%;
+            transform: translate(-50%,-50%) scale(1);
+        }
     </style>
 
     <?php

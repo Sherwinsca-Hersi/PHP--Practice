@@ -99,8 +99,9 @@ body{
 .open_popup{
     visibility: visible;
     top: 50%;
-    transform: translate(-50%,-50% scale(1));
+    transform: translate(-50%,-50%) scale(1);
 }
+
 
 .ok_btn{
     padding: 10px 20px;
